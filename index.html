@@ -208,9 +208,15 @@
       overflow: hidden;
       box-shadow: 0 6px 20px rgba(0,0,0,0.4);
       transition: transform 0.3s ease;
+	   position: relative;
+  z-index: 1;
+ 
     }
     .price-card:hover, .portfolio-item:hover {
       transform: translateY(-10px);
+	
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(255, 226, 95, 0.35);
     }
     .price-card h3, .portfolio-item h3 {
       color: #ffe25f;
@@ -2449,11 +2455,20 @@ body {
     .pricing-table {
       flex-direction: column;
       align-items: center;
+	  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
     }
 
     .price-card {
       width: 90%;
       margin-bottom: 20px;
+	    flex: 1 1 300px;
+    max-width: 320px;
+    margin: 15px;
     }
   }
 </style>
