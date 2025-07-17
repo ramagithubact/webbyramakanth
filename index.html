@@ -22,7 +22,51 @@
 <meta name="twitter:description" content="High-performance, premium websites by Ramakanth. Responsive. Branded. Modern.">
 <meta name="twitter:image" content="https://yourdomain.com/og-preview.jpg">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+  
+<style>
+  /* Ensure images and containers scale well */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container, .content, .section {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  /* Responsive typography and layout */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    .button, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+    nav, .nav-links {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   
   <style>
