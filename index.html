@@ -474,13 +474,18 @@
     }
 	
 	 .logoo {
-      font-size: 4rem;
-      font-weight: 900;
+      font-size: 2rem;
+      font-weight: bold;
       background: linear-gradient(90deg, #ffe25f, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 30px rgba(255, 226, 95, 0.5);
       animation: glowPulse 4s ease-in-out infinite;
+font-weight: bold;
+  color: #fff;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
     }
     .menu-toggle {
       display: none;
@@ -936,9 +941,20 @@ body {
 .hero-branding {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
   text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.brand-text {
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .logo-wrapper {
@@ -984,6 +1000,7 @@ body {
 .tagline-container {
   font-size: 1.3rem;
   font-weight: 500;
+  word-break: break-word;
   color: #ffe25f;
   text-shadow: 0 0 10px rgba(255, 226, 95, 0.3);
   opacity: 0;
