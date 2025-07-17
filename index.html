@@ -2460,43 +2460,32 @@ body {
   </div>
 
   <ul id="menu">
-    <li><a href="#heading" class="nav-link">Home</a></li>
-    <li><a href="#about" class="nav-link">About</a></li>
-    <li><a href="#pricing" class="nav-link">Plans</a></li>
+  <li><a href="#heading" class="nav-link" onclick="closeMenu()">Home</a></li>
+  <li><a href="#about" class="nav-link" onclick="closeMenu()">About</a></li>
+  <li><a href="#pricing" class="nav-link" onclick="closeMenu()">Plans</a></li>
 
-    <li class="dropdown-wrapper">
-      <a href="#portfolio-grid" class="nav-link">Portfolio <span class="arrow">▼</span></a>
-      <div class="dropdown thumbnails">
-        <a href="#portfolio-grid">
-          📦 Grid Showcase
-          <img src="assets/thumbs/thumb-grid.png" alt="Grid" />
-        </a>
-        <a href="#portfolio-scroll">
-          🌀 Scroll Showcase
-          <img src="assets/thumbs/thumb-scroll.png" alt="Scroll" />
-        </a>
-        <a href="#portfolio-carousel">
-          🎯 Carousel Showcase
-          <img src="assets/thumbs/thumb-carousel.png" alt="Carousel" />
-        </a>
-        <a href="#portfolio-slider">
-          🎞️ Slider Showcase
-          <img src="assets/thumbs/thumb-slider.png" alt="Slider" />
-        </a>
-      </div>
-    </li>
+  <li class="dropdown-wrapper">
+    <a href="#portfolio-grid" class="nav-link" onclick="closeMenu()">Portfolio <span class="arrow">▼</span></a>
+    <div class="dropdown thumbnails">
+      <a href="#portfolio-grid" onclick="closeMenu()">📦 Grid Showcase</a>
+      <a href="#portfolio-scroll" onclick="closeMenu()">🌀 Scroll Showcase</a>
+      <a href="#portfolio-carousel" onclick="closeMenu()">🎯 Carousel Showcase</a>
+      <a href="#portfolio-slider" onclick="closeMenu()">🎞️ Slider Showcase</a>
+    </div>
+  </li>
 
-    <li class="dropdown-wrapper">
-      <a href="#testimonials" class="nav-link">More <span class="arrow">▼</span></a>
-      <div class="dropdown">
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQs</a>
-        <a href="#skills">Skills</a>
-      </div>
-    </li>
+  <li class="dropdown-wrapper">
+    <a href="#testimonials" class="nav-link" onclick="closeMenu()">More <span class="arrow">▼</span></a>
+    <div class="dropdown">
+      <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+      <a href="#faq" onclick="closeMenu()">FAQs</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+    </div>
+  </li>
 
-    <li><a href="javascript:void(0);" class="nav-link" onclick="toggleContactPanel()">📞 Contact Us For More Details</a></li>
-  </ul>
+  <li><a href="javascript:void(0);" class="nav-link" onclick="toggleContactPanel(); closeMenu()">📞 Contact Us For More Details</a></li>
+</ul>
+
 </nav>
 
   <div id="contactBackdrop" class="contact-backdrop" onclick="toggleContactPanel()"></div>
@@ -3897,6 +3886,18 @@ revealItems.forEach(item => observer.observe(item));
       nav.classList.remove('scrolled');
     }
   });
+</script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+
+  function closeMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.remove("active");
+  }
 </script>
 
 
