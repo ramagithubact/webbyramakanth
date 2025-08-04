@@ -2334,6 +2334,49 @@ body {
 <body>
 
 
+ <header>
+        <nav class="navbar">
+  <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" loading="lazy" style="height: 40px;">
+    <span>WEB BY RAMAKANTH</span>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
+    <li><a href="#heading" class="nav-link" onclick="closeMenu()">Home</a></li>
+    <li><a href="#about" class="nav-link" onclick="closeMenu()">About</a></li>
+    <li><a href="#pricing" class="nav-link" onclick="closeMenu()">Pricing Plans</a></li>
+
+    <li class="dropdown-wrapper">
+      <a href="#portfolio-grid" class="nav-link" onclick="closeMenu()">Portfolio <span class="arrow">▼</span></a>
+      <div class="dropdown thumbnails">
+        <a href="#portfolio-grid" onclick="closeMenu()">📦 Grid Showcase</a>
+        <a href="#portfolio-scroll" onclick="closeMenu()">🌀 Scroll Showcase</a>
+        <a href="#portfolio-carousel" onclick="closeMenu()">🎯 Carousel Showcase</a>
+        <a href="#portfolio-slider" onclick="closeMenu()">🎞️ Slider Showcase</a>
+      </div>
+    </li>
+
+    <li class="dropdown-wrapper">
+      <a href="#testimonials" class="nav-link" onclick="closeMenu()">More <span class="arrow">▼</span></a>
+      <div class="dropdown">
+        <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+        <a href="#faq" onclick="closeMenu()">FAQs</a>
+        <a href="#skills" onclick="closeMenu()">Skills</a>
+      </div>
+    </li>
+
+    <li><a href="javascript:void(0);" class="nav-link" onclick="toggleContactPanel(); closeMenu()">📞 Contact Us For More Details</a></li>
+  </ul>
+</nav>
+
+    </header>
+<!--
  <nav class="navbar">
   <div class="logo" style="display: flex; align-items: center; gap: 10px;">
     <img src="logo.png" alt="Logo" loading="lazy" style="height: 40px;">
@@ -2373,7 +2416,7 @@ body {
   <li><a href="javascript:void(0);" class="nav-link" onclick="toggleContactPanel(); closeMenu()">📞 Contact Us For More Details</a></li>
 </ul>
 
-</nav>
+</nav>-->
 
   <div id="contactBackdrop" class="contact-backdrop" onclick="toggleContactPanel()"></div>
  
